@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pjatk.mas.s24512.masproject.MIController">
+   <children>
+      <ToolBar>
+         <items>
+            <Label text="Name:" textAlignment="CENTER" />
+            <TextField fx:id="firstNameField" disable="true" text="name" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel1" text="Role:" textAlignment="CENTER" />
+            <TextField fx:id="roleField" disable="true" text="role" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel2" text="Login:" textAlignment="CENTER" />
+            <TextField fx:id="loginField" text="login" />
+            <Button mnemonicParsing="false" onAction="#setLogin" text="Set login" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel3" text="Password:" textAlignment="CENTER" />
+            <TextField fx:id="passwordField" text="pass" />
+            <Button mnemonicParsing="false" onAction="#setPassword" text="Set password" />
+            <Label fx:id="passInfoLabel" textAlignment="CENTER" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel4" text="Manager:" textAlignment="CENTER" />
+            <TextField fx:id="managerField" disable="true" text="manager" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel5" text="Birthdate:" textAlignment="CENTER" />
+            <TextField fx:id="birthDateField" disable="true" text="Birthdate" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel6" text="Employment Date:" textAlignment="CENTER" />
+            <TextField fx:id="employmentDateField" disable="true" text="EmploymentDate:" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel7" text="Salary base:" textAlignment="CENTER" />
+            <TextField fx:id="salaryBaseField" disable="true" text="11111" />
+            <Label fx:id="nameLabel71" text="Salary final:" textAlignment="CENTER" />
+            <TextField fx:id="salaryFinalField" disable="true" text="2222" />
+         </items>
+      </ToolBar>
+      <ToolBar>
+         <items>
+            <Label fx:id="nameLabel9" text="Level of education:" textAlignment="CENTER" />
+            <TextField fx:id="levOfEduField" disable="true" text="none" />
+         </items>
+      </ToolBar>
+      <ButtonBar nodeOrientation="LEFT_TO_RIGHT">
+        <buttons>
+            <Separator orientation="VERTICAL" visible="false" />
+            <Separator orientation="VERTICAL" visible="false" />
+            <Button mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
+            <Separator orientation="VERTICAL" visible="false" />
+            <Separator orientation="VERTICAL" visible="false" />
+        </buttons>
+      </ButtonBar>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

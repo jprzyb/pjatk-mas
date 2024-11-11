@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pjatk.mas.s24512.masproject.NCController">
+   <children>
+      <VBox alignment="CENTER" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="ID: " />
+                  <TextField fx:id="idField" disable="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Name: " />
+                  <TextField fx:id="nameField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Start date:" />
+                  <DatePicker fx:id="startDateDatePicker" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="End date:" />
+                  <DatePicker fx:id="endDateDatePicker" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Method of settlement:" />
+                  <ChoiceBox fx:id="methodOfSettlement" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Estimations:" />
+                  <TextField fx:id="estimationsField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Needs new creation?" />
+                  <CheckBox fx:id="newCreationCheckBox" mnemonicParsing="false" onAction="#setCrationDescriptionFieldEdition" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Creation size: " />
+                  <ChoiceBox fx:id="sizeChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Is animated?" />
+                  <CheckBox fx:id="animatedCheckBox" mnemonicParsing="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Communication channel: " />
+                  <ChoiceBox fx:id="communicationChannelChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label text="Client:" />
+                  <ChoiceBox fx:id="clientChoiceBox" prefWidth="150.0" />
+                  <Button fx:id="newClientButton" mnemonicParsing="false" onAction="#onNewClientAction" text="New client" />
+               </children>
+            </HBox>
+            <Label fx:id="infoLabel" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Description: " />
+            <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Target description: " />
+            <TextArea fx:id="targetField" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Creation description: " />
+            <TextArea fx:id="creationDescriptionField" disable="true" prefHeight="200.0" prefWidth="200.0" />
+            <Separator prefWidth="200.0" />
+            <Label />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+                  <Button mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

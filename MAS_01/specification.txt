@@ -1,0 +1,11 @@
+Stwożyć program, który będzie zawerał następujące własności:
+
+Ekstensja trwała	-	Lista books
+Atr. złożony		-	Author
+Atr. opcjonalny		- 	Reviews
+Atr. powt.			-	Reviews
+Atr. klasowy		-	vatRate
+Atr. pochodny		-	id, price
+Met. klasowa		-	printAllBooks
+Przesłonięcie		-	toString
+przeciążenie		-	addReview
